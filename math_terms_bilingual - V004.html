@@ -1,0 +1,579 @@
+<html>
+    <head>
+    <title>小学数学术语中英文对照查找工具</title>
+    <meta http-equiv="content-type" content="text/html charset=utf8"/>
+    <style type = "text/css">
+        .aoption {padding:10px;background-color: skyblue;color:#fff;width:600px;font-size:48pt;margin-right:10px;}
+        .q {background-color:lightblue; color:#fff;width:600px;font-size:36pt;}
+        .clearfix {zoom:1;clear:left;}
+        .clearfix::after{display:block;content:'';clear:both}
+        .morebutton {background-color:#0cc; color:#fff;width:150px;font-size:16pt; height:80px;}
+        .option1st{float:left;margin-bottom:50px;}
+        html,body{margin:0;padding:10px;}
+        .morecontent{font-size:14pt;padding:10px; width:600px;}
+        .loopq{background-color:lightgrey; color:#fff;width:20%;font-size:16pt; height:80px;}
+        .divrow{width:600px;}
+        .buttongoright{margin-left:340px; }
+        .num{width:180px;}
+.donecorrect{color:green; }
+.doneincorrect{color:red; }
+.progressbar{background-color:lightgrey;  margin-left:10px;float:left; width:50%;}
+        </style>
+    
+        <script type=""></script>
+    
+    <script type="text/javascript">
+         
+        
+        window.onload=function(){        
+			
+			wordlist = [
+			
+
+["加法","addition","加法","上海小学四年级"],
+["加法","altogether","一共","上海小学四年级"],
+["加法","sum","和","上海小学四年级"],
+["加法","combine","结合","上海小学四年级"],
+["加法","put with","组合","上海小学四年级"],
+["加法","addition algorithm","加法运算法则","上海小学四年级"],
+["加法","addend","加数","上海小学四年级"],
+["减法","subtraction","减法","上海小学四年级"],
+["减法","take","拿","上海小学四年级"],
+["减法","subtraction","减法","上海小学四年级"],
+["减法","how many less","少多少","上海小学四年级"],
+["减法","less","少多少","上海小学四年级"],
+["减法","take away","取出","上海小学四年级"],
+["减法","remove","移开","上海小学四年级"],
+["减法","minus","减法","上海小学四年级"],
+["减法","spend","花","上海小学四年级"],
+["减法","minuend","被减数","上海小学四年级"],
+["减法","subtrahend","减数","上海小学四年级"],
+["减法","difference","差","上海小学四年级"],
+["乘法","multiplicand","被乘数","上海小学四年级"],
+["乘法","multipier","乘数","上海小学四年级"],
+["乘法","product","积","上海小学四年级"],
+["乘法","factor","因数","上海小学四年级"],
+["除法","division","除法","上海小学四年级"],
+["除法","share by","被分成","上海小学四年级"],
+["除法","divideend","被除数","上海小学四年级"],
+["除法","divisor","除数","上海小学四年级"],
+["除法","quotient","商","上海小学四年级"],
+["除法","divided by","被...除","上海小学四年级"],
+			
+["数与运算","zero","零","小学"],
+["数与运算","one","一","小学"],
+["数与运算","two","二","小学"],
+["数与运算","three","三","小学"],
+["数与运算","four","四","小学"],
+["数与运算","five","五","小学"],
+["数与运算","six","六","小学"],
+["数与运算","seven","七","小学"],
+["数与运算","eight","八","小学"],
+["数与运算","nine","九","小学"],
+["数与运算","ten","十","小学"],
+["数与运算","the first","第一","小学"],
+["数与运算","the second","第二","小学"],
+["数与运算","the third","第三","小学"],
+["数与运算","the fourth","第四","小学"],
+["数与运算","the fifth","第五","小学"],
+["数与运算","the sixth","第六","小学"],
+["数与运算","the seventh","第七","小学"],
+["数与运算","the eighth","第八","小学"],
+["数与运算","the ninth","第九","小学"],
+["数与运算","the tenth","第十","小学"],
+["数与运算","forward","前","小学"],
+["数与运算","back","后","小学"],
+["数与运算","compare","比较","小学"],
+["数与运算","more/greater than","大于","小学"],
+["数与运算","less/smaller than","小于","小学"],
+["数与运算","plus/and/add","加","小学"],
+["数与运算","addition","加法","小学"],
+["数与运算","addend","加数","小学"],
+["数与运算","plus sign","加号","小学"],
+["数与运算","sum","和","小学"],
+["数与运算","equal/is/make","等于","小学"],
+["数与运算","altogether","一共","小学"],
+["数与运算","number sentence","算式","小学"],
+["数与运算","minus/take away from/subtract","减","小学"],
+["数与运算","subtraction","减法","小学"],
+["数与运算","minus sign","减号","小学"],
+["数与运算","minuend","被减数","小学"],
+["数与运算","subtrahend","减数","小学"],
+["数与运算","difference","差","小学"],
+["数与运算","eleven","11","小学"],
+["数与运算","twelve","12","小学"],
+["数与运算","thirteen","13","小学"],
+["数与运算","fourteen","14","小学"],
+["数与运算","fifteen","15","小学"],
+["数与运算","sixteen","16","小学"],
+["数与运算","seventeen","17","小学"],
+["数与运算","eighteen","18","小学"],
+["数与运算","nineteen","19","小学"],
+["数与运算","twenty","20","小学"],
+["数与运算","carry/carrying","进位","小学"],
+["数与运算","borrow/borrowing","退位","小学"],
+["数与运算","pattern","规律/图案","小学"],
+["数与运算","twenty-one","21","小学"],
+["数与运算","twenty-two","22","小学"],
+["数与运算","twenty-three","23","小学"],
+["数与运算","twenty-four","24","小学"],
+["数与运算","twenty-five","25","小学"],
+["数与运算","twenty-six","26","小学"],
+["数与运算","twenty-seven","27","小学"],
+["数与运算","twenty-eight","28","小学"],
+["数与运算","twenty-nine","29","小学"],
+["数与运算","thirty","30","小学"],
+["数与运算","forty","40","小学"],
+["数与运算","fifty","50","小学"],
+["数与运算","sixty","60","小学"],
+["数与运算","seventy","70","小学"],
+["数与运算","eighty","80","小学"],
+["数与运算","ninety","90","小学"],
+["数与运算","one hundred","100","小学"],
+["数与运算","numerical chart","百数图","小学"],
+["数与运算","number line/number axis","数轴","小学"],
+["数与运算","nearest number","相邻数","小学"],
+["数与运算","multiple of ten","整十数","小学"],
+["数与运算","bank note","纸币","小学"],
+["数与运算","coin","硬币","小学"],
+["数与运算","exchange","互换，交换","小学"],
+["数与运算","clock face","钟面","小学"],
+["数与运算","hour","时","小学"],
+["数与运算","second","秒","小学"],
+["数与运算","hour hand","时针","小学"],
+["数与运算","minute hand","分针","小学"],
+["数与运算","second hand","秒针","小学"],
+["数与运算","a.m.","上午","小学"],
+["数与运算","p.m.","下午","小学"],
+["数与运算","day","天","小学"],
+["数与运算","hour","小时","小学"],
+["数与运算","minute","分钟","小学"],
+["数与运算","half","半","小学"],
+["数与运算","whole time","整点","小学"],
+["数与运算","half past a whole time","半点","小学"],
+["数与运算","12-hour clock","12小时制","小学"],
+["数与运算","24-hour clock","24小时制","小学"],
+["数与运算","ones place","个位","小学"],
+["数与运算","tens place","十位","小学"],
+["数与运算","hundreds place","百位","小学"],
+["数与运算","thousands place","千位","小学"],
+["数与运算","ten thousands place","万位","小学"],
+["数与运算","hundred thousands place","十万位","小学"],
+["数与运算","millions place","百万位","小学"],
+["数与运算","ten millions place","千万位","小学"],
+["数与运算","thousandths place","千分位","小学"],
+["数与运算","hundred millions","亿位","小学"],
+["数与运算","digit","位数","小学"],
+["数与运算","vertical form","竖式","小学"],
+["数与运算","numerical chart","百数表","小学"],
+["数与运算","row","行","小学"],
+["数与运算","column","列","小学"],
+["数与运算","again","又","小学"],
+["数与运算","more","多","小学"],
+["数与运算","less","少","小学"],
+["数与运算","leave/remain","剩下","小学"],
+["数与运算","take away","拿走","小学"],
+["数与运算","factor","因数","小学"],
+["数与运算","sign of multiplication","乘号","小学"],
+["数与运算","product","积","小学"],
+["数与运算","10’s timestable","10的乘法表格","小学"],
+["数与运算","times","倍","小学"],
+["数与运算","5’s timestable","5的乘法","小学"],
+["数与运算","2’s timestable","2的乘法","小学"],
+["数与运算","measure/measurement","测量","小学"],
+["数与运算","divide","分/除","小学"],
+["数与运算","divide into equal parts","平均分","小学"],
+["数与运算","dividend","被除数","小学"],
+["数与运算","sign of division","除号","小学"],
+["数与运算","divisor","除数","小学"],
+["数与运算","quotient","商","小学"],
+["数与运算","timestable","乘法口诀","小学"],
+["数与运算","multiplication","乘法","小学"],
+["数与运算","division","除法","小学"],
+["数与运算","times table","乘法口诀","小学"],
+["数与运算","remainder","余数","小学"],
+["数与运算","odd number","奇数","小学"],
+["数与运算","even number","偶数","小学"],
+["数与运算","square number","平方数","小学"],
+["数与运算","magic square","幻方","小学"],
+["数与运算","front surface","正面","小学"],
+["数与运算","lateral surface","侧面","小学"],
+["数与运算","look down","俯视","小学"],
+["数与运算","times/multiple","乘","小学"],
+["数与运算","average","平均","小学"],
+["数与运算","the greatest","最大","小学"],
+["数与运算","separate/split","分拆","小学"],
+["数与运算","is read as","读作","小学"],
+["数与运算","be written as","写作","小学"],
+["数与运算","abacus","算盘","小学"],
+["数与运算","bead","算珠","小学"],
+["数与运算","upper deck bead","上珠","小学"],
+["数与运算","lower deck bead","下珠","小学"],
+["数与运算","rod","档","小学"],
+["数与运算","horizontal axis","梁","小学"],
+["数与运算","frame","框","小学"],
+["数与运算","neighboring number","相邻数","小学"],
+["数与运算","tens","十位/整十/整十数","小学"],
+["数与运算","vertical form","竖式","小学"],
+["数与运算","align","对齐","小学"],
+["数与运算","estimate","估算","小学"],
+["数与运算","light","轻","小学"],
+["数与运算","heavy","重","小学"],
+["数与运算","order","排序/顺序","小学"],
+["数与运算","scale","秤","小学"],
+["数与运算","gram(g)","克","小学"],
+["数与运算","kilogram(kg)","千克","小学"],
+["数与运算","addition and subtraction mixed","加减混","小学"],
+["数与运算","successive addition","连加","小学"],
+["数与运算","successive subtraction","连减","小学"],
+["数与运算","list","枚举","小学"],
+["数与运算","jigsaw","拼图","小学"],
+["数与运算","flow diagram","流程图","小学"],
+["数与运算","operation","运算","小学"],
+["数与运算","order of operations","运算顺序","小学"],
+["数与运算","commute","交换","小学"],
+["数与运算","1-digit number/one-digit number","一位数","小学"],
+["数与运算","2-digit number/two-digit number","两位数","小学"],
+["数与运算","3-digit number/three-digit number","三位数","小学"],
+["数与运算","check","验算","小学"],
+["数与运算","correct","改正","小学"],
+["数与运算","year","年","小学"],
+["数与运算","month","月","小学"],
+["数与运算","day","日","小学"],
+["数与运算","common year","平年","小学"],
+["数与运算","leap year","闰年","小学"],
+["数与运算","calendar","日历","小学"],
+["数与运算","season","季度","小学"],
+["数与运算","date","日期","小学"],
+["数与运算","week","周","小学"],
+["数与运算","January","一月","小学"],
+["数与运算","February","二月","小学"],
+["数与运算","March","三月","小学"],
+["数与运算","April","四月","小学"],
+["数与运算","May","五月","小学"],
+["数与运算","June","六月","小学"],
+["数与运算","July","七月","小学"],
+["数与运算","August","八月","小学"],
+["数与运算","September","九月","小学"],
+["数与运算","October","十月","小学"],
+["数与运算","November","十一月","小学"],
+["数与运算","December","十二月","小学"],
+["数与运算","unit price","单价","小学"],
+["数与运算","amount","数量","小学"],
+["数与运算","total price","总价","小学"],
+["数与运算","speed","速度","小学"],
+["数与运算","tessellation","镶嵌","小学"],
+["数与运算","period","周期","小学"],
+["数与运算","area","面积","小学"],
+["数与运算","unit","单位","小学"],
+["数与运算","kilometer（km)","千米","小学"],
+["数与运算","decimeter","分米","小学"],
+["数与运算","centimeter","厘米","小学"],
+["数与运算","meter","米","小学"],
+["数与运算","square centimeter","平方厘米","小学"],
+["数与运算","square decimeter","平方分米","小学"],
+["数与运算","square meter","平方米","小学"],
+["数与运算","per","每","小学"],
+["数与运算","meter per second","米/秒","小学"],
+["数与运算","meter per minute","米/分","小学"],
+["数与运算","kilometer per hour","千米/时","小学"],
+["数与运算","kilometer per minute","千米/分","小学"],
+["数与运算","fraction","分数","小学"],
+["数与运算","whole","整/整体","小学"],
+["数与运算","part","部分","小学"],
+["数与运算","numerator","分子","小学"],
+["数与运算","denominator","分母","小学"],
+["数与运算","fraction bar","分数线","小学"],
+["数与运算","one-half","一半","小学"],
+["数与运算","evenly","相等地","小学"],
+["数与运算","colored parts","涂色部分","小学"],
+["数与运算","shaded parts","阴影部分","小学"],
+["数与运算","a quarter","四分之一","小学"],
+["数与运算","circle/ring","圈一圈","小学"],
+["数与运算","calculator","计算器","小学"],
+["数与运算","clear key","清除键","小学"],
+["数与运算","power on/off button","电源开关","小学"],
+["数与运算","accumulation key","累加键","小学"],
+["数与运算","memory clear key","清除储存键","小学"],
+["数与运算","clear entry(CE)","修正键","小学"],
+["数与运算","liquid crystal display(LCD)","液晶显示屏","小学"],
+["数与运算","step by step","递等式","小学"],
+["数与运算","match","搭配","小学"],
+["数与运算","shaded part","涂色部分/阴影部分","小学"],
+["数与运算","population","人口","小学"],
+["数与运算","digital place","数位","小学"],
+["数与运算","one","个","小学"],
+["数与运算","hundred","百","小学"],
+["数与运算","thousand","千","小学"],
+["数与运算","ten thousand","万","小学"],
+["数与运算","hundred thousand","十万","小学"],
+["数与运算","million","百万","小学"],
+["数与运算","ten million","千万","小学"],
+["数与运算","hundred million","亿","小学"],
+["数与运算","neighboring","相邻","小学"],
+["数与运算","rate","进率","小学"],
+["数与运算","data","数据","小学"],
+["数与运算","squared kilometer","平方千米","小学"],
+["数与运算","ton","吨","小学"],
+["数与运算","liquid","液体","小学"],
+["数与运算","capacity","容量","小学"],
+["数与运算","milliliter","毫升","小学"],
+["数与运算","liter","升","小学"],
+["数与运算","scaled container","量具","小学"],
+["数与运算","round/round off","四舍五入","小学"],
+["数与运算","compare","比大小","小学"],
+["数与运算","equivalent fraction","相等的分数","小学"],
+["数与运算","fraction wall","分数墙","小学"],
+["数与运算","workefficiency","工作效率","小学"],
+["数与运算","workload","工作量","小学"],
+["数与运算","working time","工作时间","小学"],
+["数与运算","tree diagram","树状图","小学"],
+["数与运算","input","输入","小学"],
+["数与运算","output","输出","小学"],
+["数与运算","compound number sentence","综合算式","小学"],
+["数与运算","parenthesis/round bracket","圆括号","小学"],
+["数与运算","square bracket","方括号/中括号","小学"],
+["数与运算","commutative law of addition","加法交换律","小学"],
+["数与运算","commutative law of multiplication","乘法交换律","小学"],
+["数与运算","associative law of addition","加法结合律","小学"],
+["数与运算","associative law of multiplication","乘法结合律","小学"],
+["数与运算","distributive law of multiplication","乘法分配律","小学"],
+["数与运算","round down","舍去/去尾法","小学"],
+["数与运算","round up","进一/进一法","小学"],
+["数与运算","grid","网格","小学"],
+["数与运算","decimal","小数","小学"],
+["数与运算","decimal point","小数点","小学"],
+["数与运算","compose","组成","小学"],
+["数与运算","integral part","整数部分","小学"],
+["数与运算","decimal part","小数部分","小学"],
+["数与运算","tenths place","十分位","小学"],
+["数与运算","hundredths place","百分位","小学"],
+["数与运算","ten thousandths place","万分位","小学"],
+["数与运算","unit of digital place","计数单位","小学"],
+["数与运算","ones","位","小学"],
+["数与运算","hundreds","百位/整百/整百数","小学"],
+["数与运算","pure decimal","纯小数","小学"],
+["数与运算","mixed number","带小数","小学"],
+["数与运算","convert","变换","小学"],
+["数与运算","simplify","化简","小学"],
+["数与运算","unit conversion","单位换算","小学"],
+["数与运算","rewrite","改写","小学"],
+["数与运算","add up to","增加到","小学"],
+["数与运算","approximately equal","约等于","小学"],
+["数与运算","line graph","折线统计图","小学"],
+["数与运算","draw","画","小学"],
+["数与运算","sign","符号","小学"],
+["数与运算","blank","空格","小学"],
+["数与运算","step","步骤","小学"],
+["数与运算","regular pattern","常见规律/正则模板","小学"],
+["数与运算","property","性质","小学"],
+["数与运算","value","值","小学"],
+["数与运算","move/movement","移动","小学"],
+["数与运算","square","平方","小学"],
+["数与运算","missing number","失去的数","小学"],
+["数与运算","integer/integer number/whole number","整数","小学"],
+["数与运算","calculate/find","计算","小学"],
+["数与运算","end","末尾","小学"],
+["数与运算","decimal place","小数位","小学"],
+["数与运算","original number","原数","小学"],
+["数与运算","operation law","计算法则","小学"],
+["数与运算","repeating decimal","循环小数","小学"],
+["数与运算","character","特点","小学"],
+["数与运算","repetend","循环节","小学"],
+["数与运算","round offct","凑整/四舍五入","小学"],
+["数与运算","times/multiplied by","乘以","小学"],
+["数与运算","divided by","除以","小学"],
+["数与运算","is greater than","大于","小学"],
+["数与运算","is less than","小于","小学"],
+["数与运算","natural number","自然数","小学"],
+["数与运算","positive number","正数","小学"],
+["数与运算","negative number","负数","小学"],
+["数与运算","degree Celsius","摄氏度","小学"],
+["数与运算","below zero","零下","小学"],
+["数与运算","record as","记作","小学"],
+["数与运算","opposite direction","反方向","小学"],
+["数与运算","positive direction","正方向","小学"],
+["数与运算","change","变化","小学"],
+["数与运算","increase","提高","小学"],
+["数与运算","decrease","减少","小学"],
+["数与运算","weight","重量","小学"],
+["数与运算","possibility","可能性","小学"],
+["数与运算","must","一定","小学"],
+["数与运算","must not","不可能","小学"],
+["数与运算","may be","可能","小学"],
+["数与运算","chart","图表","小学"],
+["数与运算","positive integer","正整数","小学"],
+["数与运算","negative integer","负整数","小学"],
+["数与运算","positive fraction","正分数","小学"],
+["数与运算","negative fraction","负分数","小学"],
+["数与运算","finite decimal","有限小数","小学"],
+["数与运算","infinite decimal","无限小数","小学"],
+["数与运算","positive decimal","正小数","小学"],
+["数与运算","negative decimal","负小数","小学"],
+["数与运算","whole place","整体","小学"],
+["数与运算","bracket/parenthesis","括号","小学"],
+["数与运算","round","凑整/取近似值","小学"],
+["几何","Irregular Quadrilateral","不规则多边形","小学"],
+["几何","Parallelogram","平行四边形","小学"],
+["几何","Rectangle","长方形","小学"],
+["几何","Rhombus","菱形","小学"],
+["几何","Square","正方形","小学"],
+["几何","Trapezoid","梯形","小学"],
+["几何","right triangle","直角三角形","小学"],
+["几何","Isosceles triangle","等腰三角形","小学"],
+["几何","Equilateral triangle","等边三角形","小学"],
+["几何","Scalene triangle","不等边三角形","小学"],
+["几何","acute angle","锐角","小学"],
+["几何","obtuse angle","钝角","小学"],
+["几何","right angle","直角","小学"],
+["几何","supplementary angle","补角","小学"],
+["几何","hypotenuse","三角形的斜边","小学"],
+["几何","intercept","截距","小学"],
+["几何","included angle","夹角","小学"],
+["几何","intersect","相交","小学"],
+["几何","inscribed triangle","内接三角形","小学"],
+["几何","isosceles triangle","等腰三角形","小学"],
+["几何","midpoint","中点","小学"],
+["几何","minor axis","短轴","小学"],
+["几何","origina","原点","小学"],
+["几何","oblique","斜三角形","小学"],
+["几何","plane geometry","平面几何","小学"],
+["几何","oblateness","椭圆","小学"],
+["几何","parallelogram","平行四边形","小学"],
+["几何","parallellines","平行线","小学"],
+["几何","perpendicular","垂直的","小学"],
+["几何","pythagorean theorem","勾股定理","小学"],
+["几何","pie chart","饼图","小学"],
+["几何","bar chart","柱形图","小学"],
+["几何","radius","半径","小学"],
+["几何","regular polygon","正多边形","小学"],
+["几何","rhombus","菱形","小学"],
+["几何","right circular cylinder","直圆柱体","小学"],
+["几何","right triangle","直角三角形的股","小学"],
+["几何","rigth angle","直角","小学"],
+["几何","rectangular solid","正多面体","小学"],
+["几何","slope","斜率","小学"],
+["几何","sphere","球面","小学"],
+["几何","side","边长","小学"],
+["几何","segmentofa circle","弧形","小学"],
+["几何","semiicircle","半圆","小学"],
+["几何","solid","立体","小学"],
+
+ ];
+        
+        var wordindex = 0;
+        var testword = wordlist[wordindex];
+    var aoption1 = document.getElementById("aoption1");
+    //var aoption2 = document.getElementById("aoption2");
+    
+    var q = document.getElementById("q");
+    var next = document.getElementById("next");
+    var previous = document.getElementById("previous");
+    var morecontent = document.getElementById("morecontent");
+    
+     var total = document.getElementById("total");
+	 var currentindex = document.getElementById("donetotal"); 
+var incorrectcount = 0;
+var correctcount = 0;
+var totalnum = wordlist.length;
+
+    aoption1.value = testword[2]; 
+    q.innerHTML = testword[1]; 
+	                morecontent.innerHTML = "［分类］：\t" + testword[0] + "<br/>［年级］：\t" + testword[3]  ;
+
+    
+    init();
+    function init(){
+        total.innerHTML = totalnum;
+		currentindex.innerHTML = 0; 
+    }
+    
+    
+    
+    
+    function changeword () {
+        currentindex.innerHTML = wordindex; 
+    }
+    
+    
+   aoption1.onclick=function(){
+         if(aoption1.value == testword.correct)        {
+       
+        correctcount++; 
+        }
+        
+        else{
+            alert("答错了");
+            incorrectcount++; 
+        }
+    } 
+    
+    
+    next.onclick=function(){
+         
+        wordindex++;
+         if(wordindex == wordlist.length)
+        {
+            wordindex = wordlist.length - 1;
+             alert("已到达最后一个术语");
+        }
+     else{
+             testword = wordlist[wordindex];
+           
+            aoption1.value = testword[2];
+             q.innerHTML = testword[1];
+                morecontent.innerHTML = "［分类］：\t" + testword[0] + "<br/>［年级］：\t" + testword[3]  ; 
+ }
+     
+    }
+    
+    
+    previous.onclick=function(){
+        wordindex--;
+        
+        if(wordindex <0)
+        {
+            wordindex = 0;
+            alert("已到达第一个");
+        }
+        else{ 
+            testword = wordlist[wordindex];    
+			
+            aoption1.value = testword[2]; 
+            q.innerHTML = testword[1];
+                morecontent.innerHTML = "［分类］：\t" + testword[0] + "<br/>［年级］：\t" + testword[3]  ;
+
+			 	changeword ();
+  }
+        
+        }
+        }
+        </script>
+    </head>
+    <body>
+        
+        <h3>小学数学术语中英文对照查找工具  </h3>
+		<p>版本号：MATH-TERMS-001-2022-0.4 修改日期： 2022-01-28</p>
+        <form>
+            <p>共<span id="total" class="num">300</span>个术语，
+			
+			当前为第<span id="donetotal" class="num">0</span>个 </p>
+        <div class="divrow">
+            <input type="button"  class = "loopq" id = "previous" value="<<"/>
+            <input type="button"  class = "loopq buttongoright" id = "next"  value=">>"/>
+                </div>
+        
+        <hr/>
+        
+        <div class="clearfix">
+        <p   id="q" class="q">addition</p>
+        <input type="button" class= "aoption option1st " id="aoption1" value="加法" />
+
+        </div>
+        
+        <div  id="morecontent" class="morecontent" >小学数学术语中英文对照表</div>
+        </form>
+    </body>
+    
+    </html>
+    
