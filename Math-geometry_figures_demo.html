@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="step2healthy@github|shlady@163.com">
+  <meta name="Keywords" content="math,geometry,javascript, figure">
+  <meta name="Description" content="a set of javascript classes to draw geometry figures in web page for learning and education">
+  <title>数学图形 Toolkit Demo</title>
+<style type = "text/css">
+body{padding-left: 20px;width: 800px;font-size:18pt;}
+</style>
+   <script src="./js/geometry_figures.js"></script>
+   <script>
+
+    window.onload=function(){     
+	//	const myfigures = new math_geometry_figures(100, 100);
+	//	myfigures.draw();
+
+		const myrighttriangle = new right_triangle(100,100);
+		myrighttriangle.draw(40,60,0,'red');
+		myrighttriangle.draw(40,60,1,'orange');
+		myrighttriangle.draw(40,60,2,'blue');
+		myrighttriangle.draw(40,60,3,'green');
+		myrighttriangle.setRightAngleDotPosition(160,80);
+		myrighttriangle.draw(40,60,1);
+
+
+		const myisoscelestriangle = new isosceles_triangle(300,100);
+		myisoscelestriangle.draw(80,40,0,'red');
+		myisoscelestriangle.draw(80,40,1,'orange');
+		myisoscelestriangle.draw(80,40,2,'blue');
+		myisoscelestriangle.draw(80,40,3,'green');
+
+
+		const myequilateraltriangle = new equilateral_triangle(400,100);
+		myequilateraltriangle.draw(40,0,'red');
+		myequilateraltriangle.draw(40,1,'orange');
+		myequilateraltriangle.draw(40,2,'blue');
+		myequilateraltriangle.draw(40,3,'green');
+
+		const mysquare = new square(50,200);
+		mysquare.draw(100,'red');
+
+
+		const myrect = new rectangle(200,200);
+		myrect.draw(100,60,'green');
+
+
+		const myparallelogram = new parallelogram(400,200);
+		myparallelogram.draw(100,60, 120,'blue');
+
+		const myrhombus = new rhombus(500,200);
+		myrhombus.draw(100,120,'orange');
+
+
+		const mycircle= new circle(100,400);
+		mycircle.draw(40,'red');
+	}
+	
+    </script>
+    <style>
+      canvas { border: 1px solid black; }
+    </style>
+  </head>
+  <body >
+  <div>
+ <p>一套常用的几何图形绘图API，可用于出题、讲解等。</p>
+ <ul>
+ <li>三角形：直角三角形，等腰三角形，等边三角形，<!-- 锐角三角形，钝角三角形--></li>
+ <li>四边形：正方形，长方形，平行四边形，菱形<!--不规则四边形--></li>
+ <li>圆：椭圆，圆，扇形<!--不规则四边形--></li>
+ <li>用于求阴影面积的复杂图形<!--不规则四边形--></li>
+ </ul>
+  </div>
+    <canvas id="tutorial" width="800" height="600"></canvas>
+  </body>
+</html>
+
+ 
